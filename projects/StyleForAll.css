@@ -1,0 +1,81 @@
+/* Ensuring the header menu does not wrap */
+header ol {
+  list-style: none;
+  /* Remove default list styling */
+  padding-left: 0;
+  /* Remove default padding */
+  margin: 0;
+  display: flex;
+  /* Use flexbox to keep items in a row */
+  white-space: nowrap;
+  /* Prevent wrapping */
+}
+
+header ol a li {
+  position: relative;
+  padding: 1em;
+  height: 2em;
+  width: 10em;
+  /* Adjusted width to accommodate content */
+  border-radius: 0.5em;
+  background-color: aquamarine;
+  margin: 0.5em;
+  font-size: larger;
+  font-weight: bold;
+  display: flex;
+  /* Flexbox to align content */
+  align-items: center;
+  /* Center content vertically */
+  padding-left: 70px;
+  /* Add space for the icon */
+  cursor: pointer;
+  /* Make it look clickable */
+}
+
+header ol a li::before {
+  content: "";
+  display: inline-block;
+  width: 50px;
+  height: 50px;
+  background-size: contain;
+  background-repeat: no-repeat;
+  position: absolute;
+  left: 10px;
+  top: 50%;
+  transform: translateY(-50%);
+}
+
+header ol a:nth-child(1) li::before {
+  background-image: url('../img/math.png');
+}
+
+header ol a:nth-child(2) li::before {
+  background-image: url('../img/Server_icon.webp');
+}
+
+header ol a {
+  text-decoration: none;
+  /* Remove underline from links */
+  color: black;
+  flex-grow: 0;
+  /* Allow link to take up remaining space */
+  text-align: center;
+  /* Center text */
+  display: flex;
+  /* Use flexbox to center text */
+  align-items: center;
+  /* Vertically center the text */
+  height: 100%;
+  /* Ensure link takes full height of li */
+}
+
+header ol a:active {
+  background-color: #00796b;
+  /* Change background color on active */
+  color: white;
+  /* Change text color on active */
+}
+header {
+  position: fixed;
+  transition: 0.3s;
+}

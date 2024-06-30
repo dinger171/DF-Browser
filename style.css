@@ -1,0 +1,39 @@
+#container {
+  display: flex;
+  justify-content: center;
+}
+#secretButton {
+  position: absolute;
+  opacity: 0;
+  height: 50px;
+  width: 50px;
+  top: 0;
+  left: 0;
+}
+#bigbuttom {
+  position: absolute;
+  padding: 2em;
+  border-radius: 1em;
+  background-color: aquamarine;
+  color: white;
+  font-size: 1.5em;
+  font-weight: bold;
+  box-shadow: 20px 20px 10px 0px black;
+  margin: 1em;
+  transition: 0.3s;
+}
+
+#bigbuttom:active {
+  box-shadow: 9px 9px 10px 0px black;
+  transform: translateY(5px) translateX(5px) scale(0.9);
+}
+.draggable {
+  /* position: fixed !important; */
+}
+iframe {
+  width: 500px;
+  height: 500px;
+  display: flex !important;
+  justify-content: space-between;
+  margin: 10em;
+}
